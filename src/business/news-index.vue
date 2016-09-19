@@ -1,6 +1,6 @@
 <template>
     <h1 class="main-body">
-        this is template body -- {{msg}}
+        this is our first project -- {{msg}}
     </h1>
 </template>
 <style>
@@ -12,7 +12,7 @@
     export default{
         data(){
             return {
-                msg: 'hello vue'
+                msg: 'Greg Zhanghg Zhaoxj Joan'
             }
         }
     }

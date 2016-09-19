@@ -15,13 +15,13 @@ Vue.use(Router);
 var router = new Router();
 
 router.map({
-    '/news/:page': {
+    '/news': {
         component: NewsIndex
     }
 });
 
 router.redirect({
-    '*': '/news/1'
+    '*': '/news'
 });
 
 router.start(App, '#app');
