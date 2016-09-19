@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GlorisZhang/Gemini.git"
+    "url": "https://github.com/GlorisZhang/Gemini-New.git"
   },
   "author": "Greg Zhang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GlorisZhang/Gemini/issues"
+    "url": "https://github.com/GlorisZhang/Gemini-New/issues"
   },
-  "homepage": "https://github.com/GlorisZhang/Gemini",
+  "homepage": "https://github.com/GlorisZhang/Gemini-New",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
