@@ -2,10 +2,6 @@
   "name": "gemini-news",
   "version": "1.0.0",
   "description": "Prepare for R3 project",
-  "scripts": {
-    "dev": "webpack-dev-server --inline --hot --no-info",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/GlorisZhang/Gemini-New.git"
@@ -17,26 +13,32 @@
   },
   "homepage": "https://github.com/GlorisZhang/Gemini-New",
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-runtime": "^6.0.0",
-    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-preset-stage-3": "^6.11.0",
     "babel-runtime": "^6.0.0",
     "cross-env": "^2.0.1",
     "css-loader": "^0.24.0",
     "express": "^4.13.3",
+    "html-webpack-plugin": "^2.22.0",
+    "morgan": "^1.5.2",
+    "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
-    "weui": "^0.4.3",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.0.0",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.0.11",
     "webpack-dev-server": "^1.12.0",
-    "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.12.2",
-    "webpack-merge": "^0.8.3"
+    "webpack-merge": "^0.8.3",
+    "weui": "^0.4.3"
   },
   "dependencies": {
     "es6-promise": "^3.0.2",
@@ -48,5 +50,9 @@
     "vue-validator": "^2.1.6",
     "vuex": "^1.0.0-rc.2",
     "vuex-router-sync": "^2.1.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --progress",
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
   }
 }

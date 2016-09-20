@@ -7,7 +7,6 @@ import Router from 'vue-router';
 import App from './business/App.vue';
 import NewsIndex from './business/news-index.vue';
 
-
 // install router
 Vue.use(Router);
 
