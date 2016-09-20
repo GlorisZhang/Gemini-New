@@ -1,7 +1,11 @@
 var webpack = require('webpack');
+var HotMiddleWareConfig = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000';
 
 module.exports = {
-  entry: './src/main.js',
+  entry: [
+    HotMiddleWareConfig,
+    './src/main.js'
+  ],
   output: {
     path: './dist',
     publicPath: '/dist/',
@@ -42,6 +46,8 @@ if (process.env.NODE_ENV === 'production') {
         warnings: false
       }
     }),
+    // 在 webpack 插件中引入 webpack.HotModuleReplacementPlugin
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurenceOrderPlugin()
   ]
 } else {
