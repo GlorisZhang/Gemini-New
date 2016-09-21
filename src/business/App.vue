@@ -2,8 +2,8 @@
   <div id="wrapper">
     <!-- header -->
     <div id="header">
-      <a id="yc" href="http://www.ycombinator.com">
-        <img src="https://news.ycombinator.com/y18.gif">
+      <a id="yc" href="https://github.com/GlorisZhang">
+        <img src="http://localhost:8080/src/assets/images/gemini-logo.jpg" width="100px"/>
       </a>
       <h1><a href="#/">Gemini News</a></h1>
       <span class="source">
@@ -45,8 +45,9 @@ a
   margin 0 auto
 
 #header
-  background-color #f60
-  height 24px
+  background-color #fff
+  height auto
+  line-height 72px
   position relative
   h1
     font-weight bold
@@ -55,18 +56,18 @@ a
     vertical-align middle
     margin 0
   .source
-    color #fff
+    color #038cd6
     font-size 11px
     position absolute
     top 4px
     right 4px
     a
-      color #fff
+      color #038cd6
       &:hover
         text-decoration underline
 
 #yc
-  border 1px solid #fff
+  border 1px solid transparent
   margin 2px
   display inline-block
   vertical-align middle
@@ -88,4 +89,10 @@ a
     margin 0
   #wrapper
     width 100%
+
+  #yc
+    img
+      width 50px
+      height 40px
+
 </style>

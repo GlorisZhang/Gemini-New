@@ -41,6 +41,49 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader:  ExtractTextPlugin.extract("style-loader", "css-loader")//添加对样式表的处理
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'url',
+                query: {
+                    limit: 10000,
+                    name: '[name].[ext]?[hash]'
+                }
+            },
+            {
+                test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url",
+                query: {
+                    name: '[name].[ext]?[hash]&mimetype=application/font-woff'
+                }
+            },
+            {
+                test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url",
+                query: {
+                    name: '[name].[ext]?[hash]&mimetype=application/font-woff2'
+                }
+            },
+            {
+                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url",
+                query: {
+                    name: '[name].[ext]?mimetype=application/font-woff2'
+                }
+            },
+            {
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url",
+                query: {
+                    name: '[name].[ext]?mimetype=application/font-woff2'
+                }
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "url",
+                query: {
+                    name: '[name].[ext]?mimetype=image/svg+xml'
+                }
             }
         ]
     },
