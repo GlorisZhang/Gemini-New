@@ -2,19 +2,21 @@
  * Created by Greg Zhang on 2016/9/20.
  */
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var path = require('path');
 
 module.exports = {
-    devtool: '#source-map',
+    devtool: '#eval-source-map',
     entry: [
-       './src/main.js'
+        __dirname + '/src/main.js'
     ],
     output: {
-        path: './dist',
+        path: __dirname + '/dist',
         publicPath: '/dist/',
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: "./",//本地服务器所加载的页面所在的目录
+        contentBase: __dirname + '/',//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
         inline: true,//实时刷新
         hot: true
@@ -38,7 +40,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css?modules!postcss'//添加对样式表的处理
+                loader:  ExtractTextPlugin.extract("style-loader", "css-loader")//添加对样式表的处理
             }
         ]
     },
@@ -56,6 +58,7 @@ module.exports = {
                 warnings: false
             }
         }),
+        new ExtractTextPlugin('news.css'),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),

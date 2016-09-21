@@ -8,6 +8,8 @@
   },
   "author": "Greg Zhang",
   "license": "MIT",
+  "main": "./src/main.js",
+  "private": true,
   "bugs": {
     "url": "https://github.com/GlorisZhang/Gemini-New/issues"
   },
@@ -21,14 +23,17 @@
     "babel-preset-stage-2": "^6.13.0",
     "babel-preset-stage-3": "^6.11.0",
     "babel-runtime": "^6.0.0",
+    "compression-webpack-plugin": "^0.3.1",
     "cross-env": "^2.0.1",
     "css-loader": "^0.24.0",
     "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
     "morgan": "^1.5.2",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
+    "transfer-webpack-plugin": "^0.1.4",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.0.0",
@@ -52,7 +57,7 @@
     "vuex-router-sync": "^2.1.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress",
-    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
+    "start": "webpack-dev-server --progress --inline --hot --quiet --config ./webpack.production.config.js",
+    "build": "webpack --progress --hide-modules --config webpack.build.js"
   }
 }

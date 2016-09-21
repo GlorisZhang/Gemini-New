@@ -6,7 +6,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import App from './business/App.vue';
 import NewsIndex from './business/news-index.vue';
-
+import './assets/css/weui.css';
+import './assets/css/app.css';
 // install router
 Vue.use(Router);
 

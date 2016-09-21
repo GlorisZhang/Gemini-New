@@ -6,15 +6,15 @@ var webpack = require('webpack');
 module.exports = {
     devtool: '#source-map',
     entry: [
-        './src/main.js'
+        __dirname + '/src/main.js'
     ],
     output: {
-        path: './dist',
+        path: __dirname + '/dist',
         publicPath: '/dist/',
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: "./",//本地服务器所加载的页面所在的目录
+        contentBase: __dirname + '/',//本地服务器所加载的页面所在的目录
         historyApiFallback: true,//不跳转
         inline: true,//实时刷新
         hot: true
