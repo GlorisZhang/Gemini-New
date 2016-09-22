@@ -997,6 +997,7 @@ input.weui_btn_plain_default {
   box-sizing: border-box;
   height: 100%;
   padding-bottom: 55px;
+  padding-top: 50px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }

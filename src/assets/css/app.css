@@ -1,4 +1,11 @@
-.main-body {
-    background-color: #e4393c;
-    margin: 0;
+html, body, .tabbar, #wrapper{
+    height: 100%;
 }
+
+.navbar{
+    margin-top: -50px;
+}
+.navbar .bd{
+    height: 100%;
+}
+
