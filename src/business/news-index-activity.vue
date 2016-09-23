@@ -18,6 +18,9 @@
                                 <div class="weui_navbar_item">
                                     选项四
                                 </div>
+                                <div class="weui_navbar_item">
+                                    选项五
+                                </div>
                             </div>
                             <div class="weui_tab_bd">
 
