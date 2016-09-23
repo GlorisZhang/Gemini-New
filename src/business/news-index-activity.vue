@@ -21,12 +21,6 @@
                                 <div class="weui_navbar_item">
                                     选项五
                                 </div>
-                                <div class="weui_navbar_item">
-                                    选项六
-                                </div>
-                            </div>
-                            <div class="weui_tab_bd">
-                                张洪光SB
                             </div>
                         </div>
                     </div>
